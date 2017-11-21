@@ -19,7 +19,6 @@
 .dropit .dropit-submenu {
     position: absolute;
     top: 100%;
-    left: 0; /* dropdown left or right */
     right: 0; /* dropdown left or right */
     z-index: 1000;
     display: none;
@@ -35,7 +34,7 @@
     border-radius: 4px; 
 }
 .dropit .dropit-open .dropit-submenu:after {
-    content: "";
+    content: " ";
     position: absolute;
     border-style: solid;
     border-width: 0 8px 8px;
