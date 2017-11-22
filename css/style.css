@@ -2,11 +2,11 @@ html, body{
 	overflow-x: hidden;
 }
 body {
-	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #484848;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 h2 {
 	font-size:28px;
@@ -209,7 +209,7 @@ header .hero img {
 	vertical-align: top;
 }
 .box h4 span.month {
-	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-family:'Roboto', sans-serif;
 	font-weight: 100;
 	color: #484848;
 	font-size: 20px;
@@ -346,13 +346,68 @@ footer .logo {
 .left-nav {
 	height: 100%;
 	width: 280px;
-	color: #F2F1EF;
-	background: #F2F1EF;
-	position: fixed;
-	left: 0;
-	z-index: 10;
-	display: block;
+	position: absolute;
+	-webkit-transition: all 0.3s ease-in-out;
+   	-moz-transition: all 0.3s ease-in-out;
+   	-o-transition: all 0.3s ease-in-out;
+   	transition: all 0.3s ease-in-out;
+   	transform: translate(-280px,0);
+     	-webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+     	-o-transform: translate(-280px,0); /** Opera **/
+     	-moz-transform: translate(-280px,0); /** Firefox **/
 }
+.left-nav .open {
+	display: block;
+	width: 280px;
+	background: #F2F1EF;
+	-webkit-transition: all 0.3s ease-in-out;
+   	-moz-transition: all 0.3s ease-in-out;
+   	-o-transition: all 0.3s ease-in-out;
+   	transition: all 0.3s ease-in-out;
+   	transform: translate(0,0);
+    	-webkit-transform: translate(0,0); /** Chrome & Safari **/
+     	-o-transform: translate(0,0); /** Opera **/
+     	-moz-transform: translate(0,0); /** Firefox **/
+     	z-index: 100;
+}
+.hamburger {
+	position: absolute;
+	z-index: 1000;
+	background: #484848;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 22px;
+	padding: 10px 15px;
+	border-radius: 4px;
+	left: 5px;
+	top: 15px;
+}
+@media (min-width:992px) {
+	.left-nav {
+	    height: 100vh;
+    	width:14.66666667%;
+     	color:#FFFFFF;
+     	background: #F2F1EF;
+     	float:left;
+     	position: fixed;
+     	display:block;
+     	transform: translate(0,0);
+     	-webkit-transform: translate(0,0); /** Chrome & Safari **/
+    	 -o-transform: translate(0,0); /** Opera **/
+    	 -moz-transform: translate(0,0); /** Firefox **/
+    }
+    .left-nav .open {
+		width: 14.66666667%;
+   		transform: translate(0,0);
+    	-webkit-transform: translate(0,0); /** Chrome & Safari **/
+     	-o-transform: translate(0,0); /** Opera **/
+     	-moz-transform: translate(0,0); /** Firefox **/
+     	z-index: 100;
+     }
+     .hamburger {
+     	display: none;
+     }
+} 
 .left-nav .site-logo {
 	padding: 20px 0;
 	background: #FF8000;
@@ -374,13 +429,16 @@ footer .logo {
 	padding: 0;
 }
 .left-nav .items ul li {
+	font-family:'Roboto', sans-serif;
+	font-weight: 400;
 	list-style-type: none;
 	margin-bottom: 15px;
 }
 .left-nav .items ul li a {
+	font-family:'Roboto', sans-serif;
+	font-weight: 400;
 	color: #484848;
 	text-decoration: none;
-	font-weight: 100;
 }
 .left-nav .items ul li a i {
 	width: 16px;
@@ -443,7 +501,7 @@ footer .logo {
 	margin: 0 1% 20px;
 }
 .content .header h1 {
-	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-family:'Roboto', sans-serif;
 	font-weight: 100;
 	margin: 0 0 30px;
 	font-size: 36px;
@@ -460,11 +518,14 @@ footer .logo {
 	width: 23%;
 	margin-right: 2%;
 	box-sizing: border-box;
+	border: 0.5px solid #484848;
 	/*margin: 0 2% 25px;*/
 	display: inline-block;
 }
 .content-item-type {
-	border: 1px solid #484848;
+	font-family:'Roboto', sans-serif;
+	font-weight: 400;
+	border: 0.5px solid #484848;
 	padding: 20px;
 
 }
@@ -538,7 +599,7 @@ footer .logo {
 	right: 0;
 }
 .item-box h2 {
-	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-family:'Roboto', sans-serif;
 	font-weight: 700;
 	font-size: 15px;
 	line-height: 17px;
